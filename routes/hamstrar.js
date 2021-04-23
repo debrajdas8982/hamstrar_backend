@@ -41,7 +41,6 @@ router.get('/:id', async (req, res) => {
 
 //POST /hamstrar
 
-
 router.post('/', async (req, res)=>{
 	const object = req.body
 
@@ -60,6 +59,7 @@ function isToolsObject(maybeObject) {
 	if( !maybeObject )
 		return false
 	else if( !maybeObject.name || !maybeObject.age || !maybeObject.defeats || !maybeObject.favFood || !maybeObject.games|| !maybeObject.loves || maybeObject.wins)
+
 		return false
 
 	return true
@@ -68,8 +68,8 @@ function isToolsObject(maybeObject) {
 //PUT
 router.put('/:id', async (req, res) => {
 
-	// const object = req.body
-	// const id = req.params.id
+	const object = req.body
+	const id = req.params.id
 
 	console.log('console log 1', object);
 	console.log('console log 1.2', id);
